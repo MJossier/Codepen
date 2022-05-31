@@ -1,0 +1,74 @@
+@import @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Macondo&family=Montserrat:wght@200&display=swap');
+
+html {
+  font-family: 'Lobster', cursive;
+  
+}
+header {
+  color: black;
+  background-color: rgb(200,200,200);
+  width: 100%;
+  position: fixed;
+  display: block;
+  top: 0;
+  font-size: 30px;
+    text-align : right;
+
+}
+#header {
+  
+  padding: 10px 10px; /* Some padding */
+  color: black;
+  text-align: center; /* Centered text */
+  font-size: 50px; /* Big font size */
+  font-weight: bold;
+  position: fixed; /* Fixed position - sit on top of the page */
+  top: 0;
+  width: 100%; /* Full width */
+  transition: 0.5s; /* Add a transition effect (when scrolling - and font size is decreased) */
+}
+
+#vertical-menu {
+  width: 50%;
+  left:0;
+   
+   /* Set a width if you like */
+}
+
+.vertical-menu a {
+  background-color: #eee; /* Grey background color */
+  color: black; /* Black text color */
+  display: flex; /* Make the links appear below each other */
+
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+  background-color: #04AA6D; /* Add a green color to the "active/current" link */
+  color: white;
+}
+div {
+  background-color : rgb(200,200,200);
+  position :fixed;
+  top:0px;
+  left:0px;
+ 
+}
+body {
+    background-color: rgb(200,200,200);;
+  }
+
+section {
+  background-color : rgb(200,200,200);
+width : 70%;
+  position: relative;
+  display: block;
+  top:32px;
+  right:0;
+float: right;
+}

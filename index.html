@@ -1,0 +1,314 @@
+ <header>Saisir l'offre Trunk SIP  dans Clarify (Téléphonie SIP) </header>
+
+<div class="vertical-menu">
+<nav id="navbar">
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li>
+      <a class="nav-link" href="#What_you_should_already_know"
+        >Ce que vous devez savoir</a
+      >
+    </li>
+    <li>
+      <a class="nav-link" href="#Saisie_IPBX_PRINCIPAL"
+        >SAISIE IPBX PRINCIPAL</a
+      >
+    </li>
+    <li>
+      <a class="nav-link" href="#saisie_site_distant">SAISIE SITE DISTANT</a>
+    </li>
+    <li><a class="nav-link" href="#Ajout_SDA">AJOUT DE SDA</a></li>
+    <li><a class="nav-link" href="#Upgrade_Downgrade">UPGRADE / DOWNGRADE DE DSO</a></li>
+    <li>
+      <a class="nav-link" href="#Modification_adressage_IP">MODIFICATION ADRESSAGE IP</a>
+    </li>
+    <li><a class="nav-link" href="#Demenagement_site_distant">DEMENAGEMENT SITE DISTANT</a></li>
+    <li><a class="nav-link" href="#Demenagement_site_config">DEMENAGEMENT SITE CONFIG</a></li>
+    <li><a class="nav-link" href="#Ticket_reflex">TICKET REFLEX </a></li>
+    <li><a class="nav-link" href="#Ticket_SLD">TICKET SLD</a></li>
+    <li>
+      <a class="nav-link" href="#Renew_Tarifaire">RENEW TARIFAIRE </a>
+    </li>
+    <li>
+      <a class="nav-link" href="#Commande_Marche_Publique"
+        >COMMANDE MARCHE PUBLIQUE</a
+      >
+    </li>
+    <li><a class="nav-link" href="#Vocabulaire">VOCABULAIRE</a></li>
+  </ul>
+</nav>
+</div>
+ 
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <h1>Introduction</h1>
+    <article>
+      <p>Le SIP ( Session Initiation Protocol) est un protocole utilisé pour initier, maintenir et terminer des appels Telephoniques sur VoIP. En quelques sortes, le SIP permet la communication sur VOIP car il etablit un appel entre un telephone emetteur et un recepteur
+
+L'IPBX ( Internet Private Branch Exchange) est un type de Logiciel utilisé pour faire de la telephonie par internet depuis un ordinateur plutot qu'un telephone
+</p>
+
+     
+      <ul>
+        <li>
+          Le Trunk SIP 
+permet au entreprise de passer des appels par internet.
+        </li>
+        <li>
+         Le Trunk SIP est un service fourni par un operateur de telephonie IP, permettant au entreprise avec un IPBX d'utiliser la VOIP afin de faire transiter les appels entrants et ou sortants.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="What_you_should_already_know">
+    <h1>Ce que vous devez savoir </h1>
+    <article>
+      <p>Se guide du SIP est valable pour les gens sachant saisir un CU un CF et les interlocuteur</p>
+
+      <ul>
+        <p>
+          Important : chaque site (site de configuration, site utilisateur et site de backup) doit posséder un contact pour chacun des rôles suivants :
+</p><ul>
+        <li>
+Contact technique</li>
+  
+<li>Contact technique backup</li>
+<li>Intégrateur (identifié comme Installateur privé sur le BC)</li>
+<li>Mainteneur (identifié comme Installateur privé sur le BC)</li>
+        </ul>
+        
+        
+        <p>
+          Pour les rôles Intégrateur et Mainteneur, prendre les informations de l'installateur privé renseigné sur le BC.
+          <ul>
+            <li>Si aucun  installateur privé n'est renseigné sur le bon de commande alors on utilise les details du contact techique. </li></ul>
+      
+        </p>
+    </article>
+  </section>
+  <section class="main-section" id="Saisie_IPBX_PRINCIPAL">
+    <h1>SAISIE IPBX PRINCIPAL </h1>
+    <article>
+      <p>
+        
+
+Si des tranches sont a migrer/ porter sur le site Principal il est obligatoire de creer un site distant avec les tranches de SDA.</p>
+
+Sur le site Principal, la BDS “tranche de SDA” le NDI sera saisie 3 fois, en debut et fin de tranche ainsi que en NDI., 
+      </p
+      <p> 
+        Voici la liste des BDS a saisir obligatoirement pour un site principal :</p>
+      <ul>
+        <img src="
+csz\Users\qsus\Desktop\Dossier site SIP\Screenshot 2022-05-30 172147.png" alt="ACCES DIRECT SCREENCHOT">
+        <li>Acces direct TOIP</li>
+      <p>Attribut a renseigner</p>
+      </ul>
+    <ul><li>Nombres de prises:Toujours (0050-0100 )sauf si + 100 SDA
+car nombres de prises correspond au nombre de SDA sur le site.</li>
+      <li>Portabilité : toujours a non pour un site principal ( car num frais SFR )</li>
+      <li>Commande désynchrnisée : toujours 'non'</li>
+      <li>Usage 9IPNET TOIP -Acces direct :l'information remonte autamatiquement si la grille tarifaire est validé</li>
+      <li>Maintenance et GTR si pas d'indiquation GTR en HO /JO sinon se refferer au BC</li>
+      <li>Partenaire TOIP : Renseigner le nom du contact qui a été attribué au mainteneur et integrateur sur le CF</li>
+      <li>Abonnement SDA ( A supprimer )</li>
+      <li>FAS Abonnement Service SIP ( a ajouter si Frais de mise en service sur le BC )</li>
+      <li>Site client avec IPBX Principal (obligatoire ) rien a modifier</li>
+      <li>Abonnement DSO SIP renseigner le nombre de DSO sur le BC</li>
+      <li>Tranche de SDA NDI  A mettre trois fois dans la Tranche</li>
+      <li>VPN TOIP sans integrateur ( si pas d'installateur privé )</li>
+      <li>VPN TOIP avec integrateur ( si installateur privé dans le BC)</li>
+</ul>
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="saisie_site_distant">
+    <h1>SAISIE SITE DISTANT</h1>
+    <article>
+     Avant de saisir 
+
+Via le pilotage des activations, interface Ulysse / Adonix, vérifier si le NDI est présent chez SFR :
+Si présent sur un accès Vgast : le NDI mentionné dans le BC peut être utilisé en tête de ligne et sera en portabilité a oui.
+Si présent sur un accès direct ou sur un PBE : faire une demande de réservation de NDI auprès de la BAL de résa (reservation-ndi-sda-gc@sfr.com)
+      <p>Toujours supprimer la BDS Abnnement DSO SIP du site distant.</p>
+      <p>Voici la liste des BDS a saisir obligatoirement pour un site Distant :</p>
+      <ul>
+        <li>Acces direct TOIP</li>
+      <li>Attribut a renseigner 
+
+Nombres de prises: 
+le nombres de prises correspond au nombre de SDA sur le site.
+
+Portabilité : Selon le BC ( oui pour une portabilité, non si c'est deja un numero chez SFR.)</li>
+      <li>Commande désynchrnisée : toujours 'non</li>
+      <li>Collecte IP_SIP</li>
+        <li>ID EDS de l'acces direct ToIP  du central : MID de votre acces qui porte la BDS 'IPBX Principal'</li>
+        <li>ID EDS de la prise associee : si VPN Tiers le champ doit rester vide, si VPN SFR indiauer le MID IPNET fourni et indiqué dans le BC.</li>
+        <li>Usage 9IPNET TOIP -Acces direct :l'information remonte autamatiquement si la grille tarifaire est validé
+</li>
+        <li>Maintenance et GTR si pas d'indiquation GTR en HO /JO sinon se refferer au BC</li>
+        <li>Partenaire TOIP : Renseigner le nom du contact qui a été attribué au mainteneur et integrateur sur le CF</li>
+        <p>Renseigner</p>
+        <li>FAS Abonnement Service SIP  distant( a ajouter si Frais de mise en service sur le BC )</li>
+        <li>Site client avec IPBX Distant (obligatoire ) rien a modifier</li>
+        <li>Abonnement SDA : rensigner le nombre de SDA sur le BC</li>
+        <li>Tranche de SDA selon BC , si pas de SDA doit etre saisie malgres tout le NDI en debut /fin de tranche de SDA
+</li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="Ajout_SDA">
+    <h1>AJOUT DE SDA </h1>
+    <p>
+      AJOUT BDS TRANCHE DE SDA 
+
+(selon nombre de SDA dans le BC )
+    </p>
+    <p>
+     Reprendre CS2K et SWITCH des autres tranches sur le meme site
+    </p>
+    <p>
+      Valider le contrat 
+    </p><ul> <li>Puis creer un ticket Reflex avec la Template suivante :</li></ul>
+    <p>Merci d'ajouter la tranche de SDA suivante :
+
+0351525354 - 0351525355
+
+sur le NDI :
+
+Contact technique:
+
+nom :FOREXAMPLE
+prenom :MARMOUD
+
+06 19 19 20 21
+
+
+marmoud.forexample@lesip.fr</p>
+  </section>
+  <section class="main-section" id="Upgrade_Downgrade">
+    <h1>UPGRADE / DOWNGRADE DE DSO</h1>
+    <article><p>
+    BDS Modification de DSO SIP
+      <ul><li>faire un a resilier sur la BDS 'abonnement DSO SIP a J</li>
+        <li>Recreer l'abonnement a J+1 abonnement DSO SIP</li>
+        <li>ajouter la BDS modification de DSO SIP</li>
+        <li>A modifier sur la BDS1</li>
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Modification_adressage_IP">
+    <h1>MODIFICATION ADRESSAGE IP</h1>
+    <article>
+      <p>
+        BDS Modification adressage SIP
+      </p>
+<ul>
+      <li>Ajouter la BDS Modification adressage SIP</li>
+  <li>a modifier </li>
+  <li>Valider le contrat </li>
+      </ul>
+        
+    </article>
+  </section>
+  <section class="main-section" id="Demenagement_site_distant">
+    <h1>DEMENAGEMENT SITE DISTANT</h1>
+    <article>
+      <p>
+        Verifier la ZNE
+      </p>
+<ul>
+  <li>Creer un nouveau lot ( avec CU -CF ) si le lot cible n'est pas existant</li>
+  <li>A Demenager sur le MID Source </li>
+  <li>Enregistrer </li>
+  <li>envoyer a la cellule TSIP.</li>
+  </ul>
+      <p
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Demenagement_site_config">
+    <h1>DEMENAGEMENT SITE CONFIG</h1>
+    <article>
+      <p>Nous ne demenagons pas les sites Principaux.( traiter par les N2)
+</p> 
+    </article>
+  </section>
+  <section class="main-section" id="Ticket_reflex">
+    <h1>TICKET REFLEX</h1>
+    <article>
+      <p>Ressaisie d'un MID
+
+
+
+Deux cas de figure possibles : le CDP a soit passé le MID en « REJECTED ADV » soit en « Cancelled by PM ». La procédure à suivre n'est pas la même selon le cas.
+
+
+
+
+
+
+
+
+
+Que ce soit pour un « REJECTED ADV » ou pour un « Cancelled by PM », il faut toujours valider le lot à la fin de la ressaisie. Il faudra valider le mouvement sur lequel il y a eu le problème qui a demandé la création du ticket Reflex pour ressaisie.
+
+
+
+Pour le ticket Reflex, suivre les étapes suivantes : Cliquer sur « Me l'affecter » (s'il n'y a pas sur Reflex « Me l'affecter », continuer directement à l'étape suivante) => « Démarrer la progression » => Mettre le commentaire avec indication des actions effectuées sur le MID qui a été « REJECTED ADV » ou bien en indiquer le nouveau MID ressaisi (si « Cancelled by PM ») => « Traiter la demande » => « Qualification de la demande » : indiquer « Modification/Change » => Puis écrire dans le commentaire « Demande traitée » => Puis cliquer sur « Traité » => Le ticket est résolu.</p>
+      <ul>
+        <li>
+          <p>« REJECTED ADV » : il suffit de modifier les attributs qui sont erronés. Une fois les modifications finies, depuis le « Pilotage des activations », aller sur « Ulysse/Adonyx », et dans la colonne « EDS », indiquer le MID de l'article qui est en « REJECTED ADV », puis cliquer sur « Chercher ». Sélectionner la ligne qui apparaît, puis cliquer sur « Relance en masse ». Enfin, valider le lot.</p>
+          <ul>
+            <li>« Cancelled by PM » : il faudra ressaisir toutes les BDS du MID. Pour cela, on peut faire « Dupliquer Article ». Attention, quand on fait « Dupliquer Article », il faut revérifier dans les BDS les attributs suivants (en effet, au moment de la duplication, les attributs écrits en noir et donc optionnels sont effacés, tandis que les attributs écrits en rouge ne sont pas effacés car ils sont obligatoires à renseigner) :
+
+</li>
+            <li>
+              BDS « Accès direct TOIP » => Attribut « Commande désynchronisée »
+
+
+
+
+
+
+
+
+
+
+
+            </li>
+            <li>BDS « Tranche de SDA » => Attributs « paires CS2K » et « paires SBC »</li>
+            <li>BDS « Collecte IP/SIP » => Attribut « ID EDS de la prise associée »</li>
+            
+            <li>Ne pas oublier également d'indiquer le NDI de tête dans la BDS « Accès direct TOIP ».
+            </li><li>Sinon, si on ne fait pas toutes ces saisies, on aura un rejet automatique. Enfin, valider le lot.</li>
+          </ul>
+        </li>
+      
+    </article>
+  </section>
+  <section class="main-section" id="Ticket_SLD">
+    <h1>TICKET SLD</h1>
+    <article>
+        
+      
+    </article>
+  </section>
+  <section class="main-section" id="Renew_Tarifaire">
+    <h1>RENEW TARIFAIRE</h1>
+    <article>
+      SI PAS DE MODIFICATION TARIFAIRE (réengagement sans changement de prix)
+ 
+La seule action à faire est de modifier la durée d’engagement dans le ‘volet administratif’
+</article>
+    <ul>
+      <li>La seule action à faire est de modifier la durée d’engagement dans le ‘volet administratif’</li> </ul>
+      <article>SI MODIFICATION TARIFAIRE (réengagement avec changement de prix et nouvelle grille tarifaire )</article>
+      <li>Si nous sommes dans ce type de cas, les actions suivantes seront à réaliser :
+ 
+Modification et importation d’un nouvelle grille tarifaire dans l’onglet dédié  dans Clarify</li>
+      
+  </section>
+ 
+</main>
